@@ -7,41 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moin's personal website</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon-32x32.png">
 </head>
 
 <body>
-    <div class="Navbar">
-        <img src="./Images/mainPageLogo.png" alt="logo image">
-        <ul class="link-wrapper">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><button>Contact me</button></li>
-        </ul>
-    </div>
+    <header>
+        <nav>
+            <div class="Navbar">
+                <img src="./Images/mainPageLogo.png" alt="logo image">
+                <ul class="link-wrapper">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Portfolio</a></li>
+                    <li><button>Contact me</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="mainContent">
-        <div class="content">
-            <p>Hi there👋 I'm</p>
-            <h1>Moin</h1>
-            <h1>Sayyed</h1>
-            <p>Full Stack Web Developer + Aspiring Data Analyst</p>
-            <p>I'm a Web Developer learning new things everyday.</p>
-            <p>based out of Pune.</p>
-        </div>
-        <div>
-        </div>
-        <div class="photo">
-            <img src="./Images/mainPagePhoto.png" alt="Coding Moin">
-        </div>
-        <div class = "hireMeButton">
-            <button>Hire me</button>
-        </div>
-        <div class="coloredCircle red"></div>
-        <div class="coloredSquare teal"></div>
-        <div class="coloredSquare yellow"></div>
-        
-    </div>
+    <main>
+        <section class="mainContent">
+            <div class="leftSection">
+                Hi there👋 I'm <h1>Moin Sayyed</h1>
+                <span class="tealText" id="element"></span>
+                <p>I'm a Web Developer learning new things everyday,</p>
+                <p>based out of Pune.</p>
+                <button>Hire Me!</button>
+            </div>
+            <div class="rightSection">
+                <img src="./Images/mainPagePhoto.png" alt="coding moin">
+            </div>
+            <div class="coloredCircle red"></div>
+            <div class="coloredSquare teal"></div>
+            <div class="coloredSquare yellow"></div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full Stack Web Developer &amp; Aspiring Data Analyst.'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
 
 </html>

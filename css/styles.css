@@ -3,73 +3,106 @@
   margin: 0;
 }
 
-@keyframes linkHighlight { 
-    from { color : white;}
-    to {color : aqua;}
-}
-
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #121212;
-    color : white;
-    font-weight: 550;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 550;
+  background-color: #121212;
+  color: white;
 }
 
 .Navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 10px 2px;
-    padding : 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 40px;
+  padding-top: 18px;
+  padding-bottom: 12px;
 }
 
 .Navbar > img {
-    height: 30px;
-    filter: invert(100%);
-    position: relative;
-    left : 160px;
+  height: 30px;
+  filter: invert(100%); /* to invert the color of the logo*/
+  position: absolute;
+  left: 160px;
 }
 
-.link-wrapper { 
-    display : inline-flex;
-    list-style: none;
+.link-wrapper {
+  position: absolute;
+  left: 900px;
+  display: inline-flex;
+  list-style: none;
 }
 
 ul li {
-    position: relative;
-    right : 100px;
-    padding: 0px 28px 0px;
-    font-size: 18px;
+  position: relative;
+  right: 100px;
+  padding: 0px 28px 0px;
+  font-size: 18px;
 }
 
 ul li button {
-    position: relative;
-    padding: 12px 32px;
-    background-color: #00DCDC;
-    border-radius: 50px;
-    bottom : 7px;
+  position: relative;
+  padding: 12px 32px;
+  background-color: #00dcdc;
+  border-radius: 50px;
+  bottom: 7px;
 }
+
 button {
-    padding: 12px 32px;
-    background-color: #00DCDC;
-    border-radius: 50px;
+  padding: 12px 32px;
+  background-color: #00dcdc;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: 0px 3px 0px 0px white;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  box-shadow: 0px 3px 0px 0px #00dcdc;
 }
 
 body > div.mainContent > div.content > p:nth-child(4) {
-    color : #00DCDC;
+  color: #00dcdc;
 }
 
 ul li a {
-    color : white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-ul li a :hover {
-    animation: linkHighlight 2s finite;
+ul li a:hover {
+  color: #00dcdc;
 }
 
 .mainContent {
-    position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.leftSection {
+  width: 40%;
+  margin-left: 200px;
+  font-size: 1.3rem;
+}
+
+.leftSection > button {
+  margin-top: 5px;
+}
+
+.rightSection {
+  width: 40%;
+  margin-right: 40px;
+}
+
+/*
+ul li a :hover {
+    animation: linkHighlight 2s finite;
 }
 
 .content { 
@@ -78,54 +111,58 @@ ul li a :hover {
     position : absolute;
     top : 110px;
     left : 200px;
-}
+} */
 
 .photo {
-    margin : 20px;
-    position: absolute;
-    top : 10px;
-    left: 850px;
+  margin: 20px;
+  position: absolute;
+  top: 10px;
+  left: 850px;
 }
 
-.hireMeButton > button{
-    padding : 12px 48px;
-    position: absolute;
-    top : 360px;
-    left : 264px;
+.hireMeButton > button {
+  padding: 12px 48px;
+  position: absolute;
+  top: 374px;
+  left: 264px;
 }
 
-.coloredSquare{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    z-index: -1;
+.coloredSquare {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: -1;
 }
 
 .coloredCircle {
-    position: absolute;
-    height : 50px;
-    width : 50px;
-    z-index: -1;
-    border-radius: 100%;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: -1;
+  border-radius: 100%;
 }
 
 .teal {
-    top : 400px;
-    left : 50px;
-    background-color: #28ffff;
-    opacity: 40%;
+  top: 400px;
+  left: 70px;
+  background-color: #28ffff;
+  opacity: 40%;
+}
+
+.tealText {
+  color: #00dcdc;
 }
 
 .yellow {
-    top : 240px;
-    left : 700px;
-    background-color: rgb(255, 255, 0);
-    opacity: 40%;
+  top: 200px;
+  left: 800px;
+  background-color: rgb(255, 255, 0);
+  opacity: 40%;
 }
 
 .red {
-    top : 560px;
-    left : 1200px;
-    background-color: red;
-    opacity: 40%;
+  top: 560px;
+  left: 1000px;
+  background-color: red;
+  opacity: 40%;
 }
